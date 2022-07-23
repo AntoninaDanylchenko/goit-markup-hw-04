@@ -138,8 +138,19 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
 
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
   background-color: var(--dark-fon);
-  
+
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/Img.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
   text-align: center;
 }
 .hero-title {
@@ -207,11 +218,31 @@ img {
 .feature > .item {
   width: 270px;
 }
-/* .feature > .item + .item,
-.feature > .item-photo + .item-photo,
-.comand-item + .comand-item {
-  margin-left: 30px;
-} */
+.feature > .item::before {
+  content: '';
+  display: block;
+  height: 120px;
+
+  margin-bottom: 30px;
+
+  background-color: var(--comand-fon);
+
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+  background-position: center;
+}
+.icon-antenna::before {
+  background-image: url(../images/icon/antenna.svg);
+}
+.icon-clock::before {
+  background-image: url(../images/icon/clock.svg);
+}
+.icon-diagram::before {
+  background-image: url(../images/icon/diagram.svg);
+}
+.icon-astronaut::before {
+  background-image: url(../images/icon/astronaut.svg);
+}
 
 .feature-title,
 .section-title,
@@ -246,6 +277,10 @@ img {
 }
 /* comand section */
 .comand {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
   background-color: var(--comand-fon);
 }
 .comand-list {
@@ -282,8 +317,13 @@ img {
 }
 /* footer */
 .page-footer {
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+
   padding-top: 60px;
   padding-bottom: 60px;
+
   background-color: var(--dark-fon);
 }
 .footer-logo {
@@ -357,8 +397,8 @@ img {
   margin-right: 30px;
 } */
 /* .portfolio-work .item:not(:nth-last-child(-n + 3)) {
-  margin-bottom: 30px; */
-}
+  margin-bottom: 30px; 
+}*/
 .portfolio-caption {
   padding: 20px 24px;
 
